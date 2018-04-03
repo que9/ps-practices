@@ -1,18 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
+
+import { UtilityModule } from './utility/utility.module';
+import { TabComponent } from './utility/tab/tab.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    /* Listing compos, dirs, pipes */
+    AppComponent,
+    TabComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    UtilityModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ /* No Application wide service */ ],
+  bootstrap: [ AppComponent /* Root component */]
 })
+
 export class AppModule { }

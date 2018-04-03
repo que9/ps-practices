@@ -1,0 +1,11 @@
+<div class="tab-container">
+    <ul>
+        <li *ngFor="let slot of slots" (click)="selectTab(slot)">
+            <span>{{slot.title}}</span>
+        </li>
+    </ul>
+
+    <div class="slots-container">
+        <ng-content></ng-content>
+    </div>
+</div>
